@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    </head>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Password Generator...!!!</h1>
+        <a href="{% url 'about' %}" class="btn btn-info">About</a>
+        <form action = " {% url 'password' %} ">
+            <select name="dd_length" >
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <label>Select the password length</label>
+            <br>
+            <input type="checkbox" name="chkbx_uppercase" class="form-check-input"/><label class="form-check-label">&nbsp;UpperCase</label>
+            <br>
+            <input type="checkbox" name="chkbx_numbers" class="form-check-input"/><label>&nbsp;Numbers</label>
+            <br>
+            <input type="checkbox" name="chkbx_specialchars" class="form-check-input"/><label>&nbsp;Special Characters</label>
+            <br>
+            <input type="submit" value="Generate Password" class="btn btn-primary" />
+        </form>
+    </div>
+</body>
+</html>
